@@ -22,7 +22,6 @@ inline int min_dist(std::vector<bool> used)
 	return min_index;
 }
 
-
 inline void dijkstra(const int start, const int end)
 {
 	std::vector<bool> used;
