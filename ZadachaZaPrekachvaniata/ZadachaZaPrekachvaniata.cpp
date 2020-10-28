@@ -36,8 +36,8 @@ void print_result(const int start, const int end)
 			else
 			{
 				output.clear();
-				output<<"No path between "
-					<<cities[start].name<<" and "
+				output<<"No path from "
+					<<cities[start].name<<" to "
 					<<cities[end].name<<std::endl;
 			}
 			break;
@@ -78,6 +78,7 @@ int main()
 	}
 	std::ifstream in(cur, std::ifstream::in);
 	const auto start_end = parse_input(in);
+	in.close();
 	dijkstra(start_end.first, start_end.second);
 	print_result(start_end.first, start_end.second);
 	return 0;
