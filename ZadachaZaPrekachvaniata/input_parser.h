@@ -13,12 +13,12 @@ inline std::pair<int, int> parse_input(std::istream& in)
 	in>>n;
 	for(auto i = 0; i<stoi(n); i++)
 	{
-		std::string c1, c2,ctime;
+		std::string c1, c2, ctime;
 		double time;
 		in>>c1>>c2>>ctime;
 		const auto id1 = add_city(c1), id2 = add_city(c2);
 		if(id1==-1||id2==-1) { throw std::exception("Cities could be added."); }
-		if((time=stod(ctime))<0) { throw std::exception("Invalid input."); }
+		if((time = stod(ctime))<0) { throw std::exception("Invalid input."); }
 		graph[id2].push_back(std::make_pair(id1, time));
 	}
 	std::string start, end;
@@ -39,6 +39,7 @@ inline int add_city(std::string city_name)
 	}
 	return id;
 }
+
 /*
 27
 1 2 2

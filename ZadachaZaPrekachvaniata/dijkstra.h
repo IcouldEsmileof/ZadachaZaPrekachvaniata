@@ -17,6 +17,7 @@ inline int min_dist(std::vector<bool> used)
 			min = cities[i].min_path;
 			min_index = i;
 		}
+		
 	}
 
 	return min_index;
